@@ -1,6 +1,20 @@
-$primary : pink;
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
+$primary : rgb(197, 14, 45);
 $secondary: skyblue;
 
+$body-bg : rgb(214, 206, 206);
 $btn-padding-x : 25px;
+$font-family-sans-serif :  'Poor Story', cursive;
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+$headings-font-family : 'Xanh Mono', monospace;
+
+$display-font-family : 'Poor Story', cursive;
+
+$btn-padding-x : 30px;
+$btn-font-size : 12px;
+
+$btn-transition:  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
