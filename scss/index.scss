@@ -11,10 +11,9 @@ $font-family-sans-serif :  'Poor Story', cursive;
 $headings-font-family : 'Xanh Mono', monospace;
 
 $display-font-family : 'Poor Story', cursive;
-
 $btn-padding-x : 30px;
 $btn-font-size : 12px;
 
-$btn-transition:  color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+$btn-transition:  color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
