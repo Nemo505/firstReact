@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "../node_modules/animate.css/animate.min.css";
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10772,20 +10773,34 @@ textarea.form-control-lg {
   }
 }
 .test {
-  transition: 0.5s;
-  transition-delay: 1s;
-  transition-duration: 1s, 3s;
-  transition-timing-function: linear;
-  transition-property: transform, color;
+  animation-name: marquee;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
 }
 
-.test:hover {
-  transform: scale(1.1) rotate(20deg) translate(20px, 20px);
+@keyframes marquee {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
 }
-
-.box:hover .test {
-  transform: translateX(200px);
-  background-color: rgb(192, 236, 192);
+@keyframes toRight200 {
+  0% {
+    transform: translateX(-700px);
+  }
+  30% {
+    transform: translateX(100px);
+  }
+  60% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

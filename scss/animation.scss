@@ -2,23 +2,16 @@
 $body-bg : gray;
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../node_modules/animate.css/animate.min.css";
 
-.test{
-    // transform: translateX(-50px) translateY(-30px);
-    transition: 0.5s;
-    transition-delay: 1s ;
-    transition-duration: 1s, 3s;
-    transition-timing-function: linear; //duration by distance
-    //ease  /slow in the end
-    //ease_in_out  /slow in the end and first
+// .test{
+    // transition-property: transform, color ;
+    // transition-property: color, font-size, transform;
+// }
 
-    transition-property: transform, color ;
-    transition-property: color 0.5, font-size 2s, transform 3s ;
-}
-
-.test:hover{
-    transform: scale(1.1) rotate(20deg) translate(20px, 20px);
-}
+// .test:hover{
+//     transform: scale(1.1) rotate(20deg) translate(20px, 20px);
+// }
 
 // .box:hover .test{
 //     transform: translateX(200px);
@@ -26,11 +19,49 @@ $body-bg : gray;
 
 //same with above
 
-.box{
-    &:hover{
-        .test{
-            transform: translateX(200px);
-            background-color:rgb(192, 236, 192);
-        }
+// .box{
+//     &:hover{
+//         .test{
+//             transition: color 0.5, font-size 2s, transform 3s ;
+//             transform: translateX(200px);
+//             background-color:rgb(192, 236, 192);
+//         }
+//     }
+// }
+
+
+.test{
+    animation-name: marquee;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5; //inifite
+    // animation-fill-mode: backwards; //forwards
+    animation-direction: alternate;
+}
+
+@keyframes marquee {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+       transform: translateX(-300px); 
+    }
+}
+
+@keyframes toRight200 {
+    0%{
+        transform: translateX(-700px);
+    }
+
+    30%{
+        transform: translateX(100px);
+    }
+
+    60%{
+        transform: translateX(-100px);
+    }
+
+    100%{
+        transform: translateX(0px);
     }
 }
