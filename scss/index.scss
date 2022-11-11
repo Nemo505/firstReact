@@ -17,3 +17,9 @@ $btn-font-size : 12px;
 $btn-transition:  color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.fix-img{
+    height: 300px;
+    object-fit: contain;
+    object-position: top;
+}

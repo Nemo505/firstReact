@@ -1,0 +1,36 @@
+
+$body-bg : gray;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.test{
+    // transform: translateX(-50px) translateY(-30px);
+    transition: 0.5s;
+    transition-delay: 1s ;
+    transition-duration: 1s, 3s;
+    transition-timing-function: linear; //duration by distance
+    //ease  /slow in the end
+    //ease_in_out  /slow in the end and first
+
+    transition-property: transform, color ;
+    transition-property: color 0.5, font-size 2s, transform 3s ;
+}
+
+.test:hover{
+    transform: scale(1.1) rotate(20deg) translate(20px, 20px);
+}
+
+// .box:hover .test{
+//     transform: translateX(200px);
+// }
+
+//same with above
+
+.box{
+    &:hover{
+        .test{
+            transform: translateX(200px);
+            background-color:rgb(192, 236, 192);
+        }
+    }
+}
