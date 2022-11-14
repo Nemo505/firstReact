@@ -12,25 +12,34 @@
         .square-box {
             width: 100px;
             height: 100px;
-            background-color: rgb(90, 19, 19);
+            background-color: rgb(102, 12, 72);
             position: relative;
         }
         .square-box::before {
-            width: 50px;
-            height: 50px;
-            background-image: linear-gradient(rgb(13, 126, 64), skyblue);
+            content: "";
+            border: 25px solid rgb(121, 117, 117);
+            border-right-color: pink;
+            border-bottom-color: pink;
+            /* background-image: linear-gradient(135deg, rgb(151, 201, 224), rgb(7, 9, 114)); */
             position: absolute;
+        }
+        .dialog-box{
+            background-color: white;
         }
     </style>
 
 </head>
 <body>
+    <div class="square-box m-3"></div>
+    <div class="border-square"></div>
+    <div class="dialog-box">
+        Lorem ipsum dolor sit.
+    </div>
+
     <div class="p-5 animate__animated animate__bounce">
         <img class="w-25 rounded" src="./images/shiroe1.jpg" alt="">
     </div>
 
-    <div class="square-box">
-
-    </div>
+    
 </body>
 </html>
